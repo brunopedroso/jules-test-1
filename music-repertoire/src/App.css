@@ -1,0 +1,87 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, form, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes width/height calculations more intuitive */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 4px 4px 0 0;
+}
+
+.App-header h1 {
+  font-size: 2em;
+}
+
+/* Main content area styling */
+main {
+  padding: 0 10px;
+}
+
+/* Styling for sections within main for better visual separation */
+/* Components like MusicForm, TagSelector, TagFilter already have some inline styles like padding and border.
+   We can ensure consistent margin for these sections if needed, or rely on their inline styles.
+   Let's add a general style for these container-like components if they are direct children of main or similar blocks.
+*/
+div[style*="border: 1px solid #eee"] { /* Targets divs with this specific inline style, used in our components */
+  border-radius: 5px;
+  margin-bottom: 20px; /* Ensures spacing between these sections */
+}
+
+
+/* Specific overrides or additions if needed, for example, for TagPill if inline styles are not enough */
+/* The current TagPill styles are mostly functional. We can leave them as is for now. */
+
+/* Button styling (a more general one if we want to override the MusicForm button) */
+/* For now, the MusicForm button has specific inline styles which are fine. */
+
+/* Textarea and Input global styling (optional, can conflict with inline styles) */
+/*
+input[type="text"],
+textarea {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+*/
+/* The above global input/textarea styles might be too broad. 
+   The inline styles in MusicForm.tsx are more targeted and should suffice for now.
+*/
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
